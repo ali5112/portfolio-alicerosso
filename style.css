@@ -1,0 +1,202 @@
+/************** GENERAL*******************/
+*{
+    box-sizing: border-box;
+
+}
+body{
+    font-family: 'open sans', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{ 
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.active{
+    background: #fbdd32;
+     border-radius: 2px;
+
+}
+.clearfix::after{
+    content:"";
+    clear: both;
+    display: table;
+}
+.title{
+    font-size: 2.2rem;
+}
+/**************HEADER*******************/
+header{
+    background-color: #090e71;
+    padding: auto;
+    text-align: center;
+    
+
+}
+header img{
+    width: 150px;
+    height: 110px;
+}
+/**************NAVIGATION*******************/
+#nav{
+    list-style-type: none;
+    text-align: center;
+    background-color:#f8f26a;
+}
+#nav li{
+    display: inline-block;
+    padding: 8px 10px 8px 10px
+}
+
+#nav li a{
+    color:#090e71;
+    text-decoration: none;
+}
+/**************MAIN*******************/
+main{
+    min-height: calc(100vh - 164.4px - 114.4px);
+}
+/**************GALLERY*******************/
+#gallery{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#gallery img{
+    width: 100%;
+
+}
+#gallery .picture {
+    line-height: 0;
+}
+#gallery .item{
+    float: left;
+    width: 50%;
+    padding:15px;
+}
+
+#gallery .caption{
+    background: #f0f0f0;
+    padding:10px;
+}
+#gallery .caption p{
+    margin:0;
+}
+
+
+/**************ABOUT*******************/
+#about img{
+    border-radius: 100% ;
+    padding: 15px 0px;
+   }
+/**************CONTATTI*******************/
+#contact ul{
+    list-style-type: none;
+    padding:0;
+}
+#contact li{
+    padding:5px 0px; 
+}
+#contact .gg-smartphone{
+    float: left;
+}
+#contact .contacts a{
+    margin:3px 0px 0px 5px;
+    display:inline-block;
+}
+#contact .gg-mail{
+    float: left;
+    margin:3px 0px 6px 0px;
+}
+#contact .gg-instagram{
+    float: left;
+}
+
+
+
+/**************FOOTER*******************/
+footer.main{
+    clear: both;
+    text-align: center;
+    padding: 25px;
+  
+}
+footer .social img{
+    width: 30px;
+    height: 30px;
+}
+footer .main a {
+    padding: 3px 6px;
+    display: inline-block;
+    
+}
+
+
+
+@media only screen and (min-width: 768px){
+    /****tutti gli schermi di pc ecc più larghi di 768 vedranno tre colonne**********/
+    #gallery .item{
+        width: 33.3333%;
+         }
+        #gallery .item:nth-child(3n+1){
+        clear: left;
+        }
+    } 
+    #gallery .item:hover {
+      opacity: .7;
+    }
+    #gallery .item{
+        transition: .3s;
+    } 
+        #nav li a{
+            transition: background .3s;
+        }
+        #nav li a:hover {
+            background: #fbdd32;
+            border-radius: 2px;
+        } 
+        
+       
+
+/*********** ABOUT **********/
+#about img{
+    padding: 5px;
+    width: 425px;
+    height: 425px;
+}
+#about .profile-pic{
+    width:50%;
+    height:50%;
+    float:left;
+    padding:0px 20px;
+}
+#about .description{
+    float: right;
+    width: 50%;
+    padding: 0px 20px;
+}
+/*********** CONTATTI **********/
+#contact .info, #contact .contacts{
+    padding:15px; 
+}
+#contact .info{
+    float: left;
+    width: 70%;
+}
+#contact .contacts{
+    float: right;
+    width: 30%;
+}
+
+
+@media only screen and (min-width: 992px){
+ 
+}
+
+@media only screen and (max-width: 767px){
+    #gallery .item:nth-child(2n+1){
+        clear: left;
+    }
+}
+    
