@@ -15,7 +15,7 @@ a{
     padding: 0 15px;
 }
 .active{
-    background: #fbdd32;
+    background:#fcde44 ;
      border-radius: 2px;
 
 }
@@ -41,13 +41,13 @@ header{
 header img{
     width: 150px;
     height: 110px;
+    padding-left: 10px;
 
 }
 /**************NAVIGATION*******************/
 #nav{
     list-style-type: none;
     text-align: center;
-    background-color:#f8f26a;
 }
 #nav li{
     display: inline-block;
@@ -57,6 +57,7 @@ header img{
 #nav li a{
     color:#090e71;
     text-decoration: none;
+   
 }
 /**************MAIN*******************/
 main{
@@ -65,6 +66,8 @@ main{
 }
 /**************GALLERY*******************/
 #gallery{
+    display: flex;
+    flex-wrap: wrap;
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -76,8 +79,7 @@ main{
     line-height: 0;
 }
 #gallery .item{
-    float: left;
-    width: 50%;
+    flex: 0 1 50%;
     padding:15px;
     position: relative;
 }
@@ -147,28 +149,24 @@ footer .main a {
 
 
 
-@media only screen and (min-width: 768px){
+@media screen and (min-width: 768px){
     /****tutti gli schermi di pc ecc più larghi di 768 vedranno tre colonne**********/
-    #gallery .item{
-        width: 33.3333%;
-         }
-        #gallery .item:nth-child(3n+1){
-        clear: left;
-        }
-    } 
-    #gallery .item:hover {
-      opacity: .7;
+    nav{
+        background-color:#fbfc53;
     }
-    #gallery .item{
-        transition: .3s;
-    } 
-        #nav li a{
-            transition: background .3s;
-        }
-        #nav li a:hover {
-            background: #fbdd32;
-            border-radius: 2px;
-        } 
+    #nav li a{
+        transition: background .3s;
+        color:#090e71;
+    }
+    #nav li a:hover {
+        background: #fcde44;
+        border-radius: 2px;
+        
+    }
+  #gallery .item{
+    flex: 0 1 33.333%
+  }
+    
 /*********** ABOUT **********/
  
  #about img{
@@ -198,19 +196,62 @@ float: right;
     float: right;
     width: 30%;
 }
+}
 
 
-
-@media only screen and (min-width: 992px){
+@media screen and (min-width: 992px){
+    header{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+    }
+    
+    nav{
+        background-color: #090e71;
+    
+    }
+   
+    #gallery .item:hover {
+        opacity: .7;
+      }
+      #gallery .item{
+          transition: .3s;
+      } 
+          #nav li a{
+              transition: background .3s;
+              color: #fcde44;
+          }
+          #nav li a:hover {
+              background: #4046be;
+              border-radius: 2px;
+          } 
+          .active{
+            background: #4046be;
+             border-radius: 2px;
+        
+        }
  
 }
 
-@media only screen and (max-width: 767px){
+@media  screen and (max-width: 767px){
+    nav{
+        background-color:#fbfc53;
+    }
+    #nav li a{
+        transition: background .3s;
+        color:#090e71;
+    }
+    #nav li a:hover {
+        background: #fcde44;
+        border-radius: 2px;
+        opacity: .3;
+    }
     #gallery .item:nth-child(2n+1){
         clear: left;
     }
-}
+
 #about img{
+    border-radius: 100%;
     padding: 5px;
     width: 100%;
    }
@@ -225,6 +266,6 @@ float: right;
     #contact .contacts{
         width: 100%;
     }
-
+}
 
     
